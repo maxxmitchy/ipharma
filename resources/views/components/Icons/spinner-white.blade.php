@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+{{$attributes->merge(['class' => ''])}}
+width="24" height="24"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><circle cx="16.6" cy="5.3" transform="scale(7.16667,7.16667)" r="2.4"></circle><circle cx="9.4" cy="3.8" transform="scale(7.16667,7.16667)" r="2.2"></circle><circle cx="3.8" cy="8.5" transform="scale(7.16667,7.16667)" r="1.9" opacity="0.35"></circle><circle cx="3.9" cy="15.9" transform="scale(7.16667,7.16667)" r="1.7" opacity="0.35"></circle><circle cx="9.7" cy="20.3" transform="scale(7.16667,7.16667)" r="1.5" opacity="0.35"></circle><circle cx="16.9" cy="18.6" transform="scale(7.16667,7.16667)" r="2.9"></circle><circle cx="19.9" cy="11.9" transform="scale(7.16667,7.16667)" r="2.7"></circle></g></g></svg>

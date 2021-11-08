@@ -1,0 +1,101 @@
+.wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 0;
+}
+
+.wrapper .item {
+    min-width: 19rem;
+    height: 22rem;
+    scroll-snap-align: center;
+}
+
+.wrapper .item_banner {
+    min-width: 17rem;
+    scroll-snap-align: center;
+}
+
+.wrapper .item-cat {
+    min-width: 10rem;
+    scroll-snap-align: center;
+}
+
+.wrapper .item-but {
+    min-width: max-content;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+/* target the active bullet */
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #074ca9;
+    opacity: 1;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.radio-container label {
+    position: relative;
+}
+
+.radio-container span:before,
+.radio-container span:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.radio-container span.radio:hover {
+    cursor: pointer;
+}
+
+.radio-container span.radio:before {
+    left: -22px;
+    width: 55px;
+    height: 27px;
+    background-color: #1a202c;
+}
+
+.radio-container span.radio:after {
+    left: -19px;
+    width: 17px;
+    height: 17px;
+    background-color: gray;
+    transition: -25s;
+}
+
+.rad:checked + label span.radio:after {
+    left: 10px;
+    background-color: #074CA9;
+}

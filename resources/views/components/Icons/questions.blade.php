@@ -1,0 +1,1 @@
+<img src="https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/000000/external-questions-online-learning-vitaliy-gorbachev-flat-vitaly-gorbachev.png" {{$attributes->merge(['class' => ''])}}/>
