@@ -7,7 +7,7 @@
         }
     }"
     @notify.window="show = true; let message = $event.detail; messages.push(message); setTimeout(() => { remove(message), show = false }, 2500)"
-    class="z-50 fixed inset-0 flex flex-col items-end justify-center px-4 py-6 sm:p-6 sm:justify-start space-y-4"
+    class="fixed inset-0 flex flex-col items-end justify-center px-4 py-6 sm:p-6 sm:justify-start space-y-4"
     x-show = show
     style="display: none;"
 >
@@ -20,7 +20,7 @@
             x-transition:leave="ease-in duration-100 transition"
             x-transition:leave-start="opacity-100"
             x-transition:leave-end="opacity-0"
-            class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-event-visible"
+            class="z-50 max-w-sm w-full bg-white shadow-lg rounded-lg pointer-event-visible"
             >
             <div class="rounded-lg shadow-xs overflow-hidden">
                 <div class="p-4">

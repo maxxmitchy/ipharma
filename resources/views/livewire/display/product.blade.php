@@ -215,7 +215,7 @@
         <br>
         <!-- end of review -->
         <br>
-        <x-Display.Guest.LandingPage.products-you-may-like/>
+        <x-Display.Guest.LandingPage.products-you-may-like :products="App\Models\Product::where('id','!=',$product->id)->latest()->take(10)->get()"/>
         <br>
         <!--  -->
     </div>

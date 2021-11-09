@@ -3,7 +3,9 @@
         &nbsp; You might also like &nbsp;
     </q>
     <div class="grid grid-cols-2 gap-2">
-        @foreach ([1,2] as $i )
+        @foreach ($products as $key => $product)
+            <livewire:partials.product-card :product="$product" :key="$key" />
         @endforeach
+        <!-- end product-card -->
     </div>
 </section>

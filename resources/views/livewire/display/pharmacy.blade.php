@@ -1,23 +1,35 @@
 <div class="">
     <x-Navigation.Guest.Header.header-one/>
     <div class="space-y-3 px-3 mt-5">
+        <div class="rounded bg-pink-300 h-44 w-full">
+
+        </div>
         <h1 class="text-2xl tracking-wider font-bold text-primary">Where you get your routine medications matter.</h1>
 
-        <p class="text-sm tracking-wider text-gray-500">The best place for filling out your prescription is at iPharma. It is best to fill all prescriptions with the same pharmacy. That way, the pharmacy has a record of all the medicines you are taking. iPharma provides convinience, confidentaility, amongst other benefits, from the comfort of your home. Read through the steps below to see other additional benefits we provide.
+        <p class="text-sm tracking-wider text-gray-500">The best place for filling out your prescription is at iPharma. It is best to fill all prescriptions with the same pharmacy. That way, the pharmacy has a record of all the medicines you are taking. iPharma provides convinience, confidentaility, amongst other benefits, from the comfort of your home.
         </p>
         <br>
         <div class="wrapper space-x-4">
             <div class="flex flex-col space-y-1">
-                <div class="item-cat rounded-md bg-gray-100 w-full h-24"></div>
-                <p class="text-center tracking-wider text-gray-800 text-sm">Men</p>
+                <img class="item-cat rounded-md bg-gray-100 object-fit h-28" src="" alt="image">
+                <p class="font-semibold tracking-wider text-gray-800 text-sm">Men</p>
+                <p class="tracking-wider text-gray-500 text-xs">
+                    It's convenient, simple and private. Wave goodbye to that awkward in-person doctor conversation.
+                </p>
             </div>
             <div class="flex flex-col space-y-1">
-                <div class="item-cat rounded-md bg-gray-100 w-full h-24"></div>
-                <p class="text-center tracking-wider text-gray-800 text-sm">Women</p>
+                <img class="item-cat rounded-md bg-gray-100 object-fit h-28" src="" alt="image">
+                <p class="font-semibold tracking-wider text-gray-800 text-sm">Women</p>
+                <p class="tracking-wider text-gray-500 text-xs">
+                    Taking care of yourself is personal. That’s why we offer premium products and access to individualized treatment
+                </p>
             </div>
             <div class="flex flex-col space-y-1">
-                <div class="item-cat rounded-md bg-gray-100 w-full h-24"></div>
-                <p class="text-center tracking-wider text-gray-800 text-sm">Children</p>
+                <img class="item-cat rounded-md bg-gray-100 object-fit h-28" src="" alt="image">
+                <p class="tracking-wider text-gray-800 text-sm">Elderly</p>
+                <p class="tracking-wider text-xs text-gray-500">
+                    Sit back and relax knowing that your treatment will arrive each month without you having to lift a finger.
+                </p>
             </div>
         </div>
         <br>

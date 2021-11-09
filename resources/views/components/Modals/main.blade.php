@@ -7,7 +7,7 @@
     @endif
             <div class="flex justify-between w-full bg-white p-4 sm:px-6 sm:py-4 border-b border-gray-150">
                 @if (isset($title))
-                    <h3 class="text-base sm:text-lg leading-6 font-medium text-gray-900">
+                    <h3 class="text-sm sm:text-lg leading-6 font-medium text-gray-900">
                         {{ $title }}
                     </h3>
                     {{$slot}}

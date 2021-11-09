@@ -8,7 +8,7 @@
     </x-slot>
     <x-slot name="iconlinks">
         <x-Icons.user url="{{route('dashboard')}}" class="h-5 w-5"/>
-        <x-Icons.search class="h-5 w-5"/>
+        <x-Icons.search @click="$dispatch('toggle-spotlight')" class="h-5 w-5"/>
         @livewire('cartcounter')
     </x-slot>
 </x-Navigation.Guest.Header.index>

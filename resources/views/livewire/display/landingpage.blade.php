@@ -41,7 +41,8 @@
         <h5 class="text-lg md:text-3xl">Subscribe to our email list to stay in touch with our latest products</h5>
         <div class="mt-10">
             <div class="relative inline-block mx-auto lg:bg-gray-200 rounded-full">
-                <form action="" class="lg:flex text-sm">
+                <form action="/newsletter" class="lg:flex text-sm">
+                    @csrf
                     <div class="lg:py-3 lg:px-5 flex items-center">
                         <label for="" class="hidden lg:inline-block">
                             <x-Icons.mail class="w-6 h-6" />

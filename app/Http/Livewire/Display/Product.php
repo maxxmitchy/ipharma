@@ -61,6 +61,6 @@ class Product extends Component
 
         $this->emit('productAddedToCart');
 
-        $this->notify('product successfully added to cart.');
+        $this->notify('product added to cart.');
     }
 }

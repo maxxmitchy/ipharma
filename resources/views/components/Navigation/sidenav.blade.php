@@ -1,6 +1,6 @@
-<div class="" x-cloak>
-    <div @click="open = !open" x-show="open" class="duration-500 z-50 inset-0 bg-gray-800 opacity-40 fixed"></div>
-    <nav :class="{'translate-x-0 ease-in opacity-100':open === true, '-translate-x-full ease-out opacity-0':open ===false}" class="overflow-y-scroll z-50 inset-0 transform duration-200 fixed w-56 bg-white h-screen shadow">
+<div class="" x-cloak >
+    <div style="display: none;" @click="open = !open" x-show="open" class="duration-500 z-50 inset-0 bg-gray-800 opacity-40 fixed"></div>
+    <nav :class="{'translate-x-0 ease-in opacity-100 w-56':open === true, '-translate-x-full ease-out opacity-0':open === false}" class="overflow-y-scroll z-50 inset-0 transform duration-200 fixed bg-white h-screen shadow">
         <div class="flex justify-between">
             <p class="text-lg font-semibold tracking-wider md:text-3xl px-4 pt-4">iPharma</p>
         </div>

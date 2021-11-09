@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Spotlight\MyOrders;
 use Livewire\Component;
 use Illuminate\Support\Arr;
+use LivewireUI\Spotlight\Spotlight;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Builder;
 
