@@ -22,7 +22,7 @@ class CategoryDisplay extends Component
 
     public function mount($name = null)
     {
-        // try and catch block with exxception handler giving 404 not found here
+        // try and catch block with exception handler giving 404 not found here
         $this->category = Category::Where('name', str_replace('-', ' ', $name))->with('subcategories', 'products')->first();
     }
 

@@ -35,7 +35,7 @@
                 <x-label for="email" :value="__('Banner Image')" />
                 <div class="flex space-x-2 my-2">
                     @if (isset($image))
-                        <img src="{{$image?->temporaryUrl()}}" class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100" alt="">
+                        <img src="{{optional($image)->temporaryUrl()}}" class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100" alt="">
                     @endif
                 </div>
                 <div class="flex w-full bg-grey-lighter">

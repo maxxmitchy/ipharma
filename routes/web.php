@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\User;
+use App\Services\Newsletter;
 use App\Http\Livewire\Admin\Brand;
 use App\Http\Livewire\Admin\Order;
 use App\Http\Livewire\Admin\Banner;
@@ -12,6 +13,8 @@ use App\Http\Livewire\Admin\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\CategoryDisplay;
 use App\Http\Livewire\Display\Checkout;
+use App\Http\Controllers\NewsletterController;
+use Illuminate\Validation\ValidationException;
 use App\Http\Livewire\Display\Product as Productdisplay;
 
 /*
@@ -62,10 +65,11 @@ Route::middleware(['auth'])->prefix('adminarea')->name('adminarea.')->group(func
     Route::get('/banners', Banner::class)->name('banners');
 });
 
-
 Route::prefix('products')->name('products.')->group(function() {
     Route::get('/{category}/{name}/{id}', Productdisplay::class)->name('product');
 });
+
+Route::post('/newsletter', NewsletterController::class);
 
 Route::get('/auto-login', function () {
     // only available in local env
@@ -74,9 +78,9 @@ Route::get('/auto-login', function () {
     // Login with admin user
     auth()->login(User::first());
 
-    //Redirect to homepage
+    //Redirect to dashboard
 
-    return redirect()->to('/');
+    return redirect()->to('/dashboard');
 
 })->name('dev-login');
 

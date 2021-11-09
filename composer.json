@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.5",
         "livewire-ui/modal": "^1.0",
         "livewire/livewire": "^2.6",
+        "mailchimp/marketing": "^3.0",
         "spatie/laravel-medialibrary": "^9.0.0",
         "spatie/laravel-permission": "^5.1",
         "usernotnull/tall-toasts": "^1.0"
