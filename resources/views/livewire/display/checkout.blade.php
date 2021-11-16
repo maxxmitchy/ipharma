@@ -118,7 +118,7 @@
                         <img alt="{{asset($image)}}" src="{{asset($image)}}" class="object-cover h-44">
                     </div>
                 @endforeach
-                <span class="flex items-center justify-center space-x-1">
+                <a href="{{route('cart')}}" class="flex items-center justify-center space-x-1">
                     <small class="text-xs font-semibold tracking-wider">
                         {{$images->count()}}
                     </small>
@@ -126,7 +126,7 @@
                         items
                     </small>
                     <x-Icons.ChevRight class="h-3 w-3" />
-                </span>
+                </a>
             </div>
         </div>
         <!--  -->
@@ -194,7 +194,7 @@
                     focus:outline-none font-bold focus:ring-opacity-50 bg-primary rounded mt-0
                     md:w-20 text-sm text-white py-2 px-5"
             >
-                <span wire:loading.class="hidden">Place Order</span>
+                <span wire:loading.class="hidden">Place Order &rarr;</span>
                 <x-Icons.spinner-white class="animate-spin h-5 w-5" wire:loading />
             </a>
             <div class="flex justify-between items-center">

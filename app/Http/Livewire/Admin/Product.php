@@ -16,7 +16,7 @@ class Product extends Component
         $products = ModelsProduct::query()
                 ->search($this->search)
                 ->with('category','section')
-                ->paginate(10);
+                ->paginate(40);
 
         return view('livewire.admin.product', ['products' => $products]);
     }

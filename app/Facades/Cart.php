@@ -11,3 +11,4 @@ class Cart extends Facade {
         return CartService::class;
     }
 }
+

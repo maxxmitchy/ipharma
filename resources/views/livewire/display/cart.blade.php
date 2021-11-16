@@ -106,7 +106,7 @@
                     </q>
                     <br>
                     <div class="grid grid-cols-2 gap-4">
-                        @foreach (App\Models\Product::inRandomOrder()->limit(10)->get() as $key => $product )
+                        @foreach (App\Models\Product::inRandomOrder()->limit(30)->get() as $key => $product )
                             <livewire:partials.product-card :product="$product" :key="$key" />
                         @endforeach
                     </div>

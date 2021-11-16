@@ -18,7 +18,7 @@
                 </div>
                 <div class="flex space-x-2">
                     <a href="{{route('products.product', ['id' => $this->product->id, 'name' => Illuminate\Support\Str::slug($this->product->product_name), 'category' => Illuminate\Support\Str::slug($this->product->category->name), 'status' => 1 ])}}"
-                        class="bg-secondary rounded text-white text-xs font-bold p-2">View product</a>
+                        class="bg-gray-600 rounded text-white text-xs font-bold p-2">View product</a>
                     <button class="bg-primary rounded text-white text-xs font-bold p-2">Add to cart</button>
                 </div>
             </div>

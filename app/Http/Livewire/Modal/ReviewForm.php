@@ -28,16 +28,11 @@ class ReviewForm extends ModalComponent
 
     public function store()
     {
-        $rating = $this->product->users()
-            ->firstWhere('user_id', auth()->id());
-            
-        if(!$rating){
-            Review::create([
-                'user_id' => auth()->id(),
-                'product_id' => $this->product->id,
-                'body' => $this->review
-            ]);
-        }
+        Review::create([
+            'user_id' => auth()->id(),
+            'product_id' => $this->product->id,
+            'body' => $this->review
+        ]);
 
         $this->reset();
 

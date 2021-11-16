@@ -1,5 +1,4 @@
 <x-guest-layout>
-    <x-guest-layout>
     <x-auth-card>
         <section class="py-14    px-5 space-y-8">
             <!--    Logo Here -->
@@ -70,5 +69,3 @@
     </x-auth-card>
 </x-guest-layout>
 
-
-</x-guest-layout>

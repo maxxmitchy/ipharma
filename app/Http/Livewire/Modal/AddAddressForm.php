@@ -16,6 +16,7 @@ class AddAddressForm extends ModalComponent
         'state.phone' => ['required','regex:/^(\+234)[0-9]{10}$/'],
         'state.house' => ['required'],
         'state.street' => ['required'],
+        'state.address' => ['required'],
         'state.city' => ['required']
     ];
 
@@ -39,8 +40,6 @@ class AddAddressForm extends ModalComponent
 
     public function store()
     {
-        $this->validate();
-
         Address::create(array_merge($this->state,
             [
                 'user_id' => auth()->id(),
@@ -49,10 +48,6 @@ class AddAddressForm extends ModalComponent
             ]
         ));
 
-        $this->notify('Address added successfully.');
-
-        $this->emit('closeModal');
-
-        $this->render();
+        $this->emit('addressAdded');
     }
 }

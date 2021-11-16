@@ -3,7 +3,7 @@
     <br>
     <br>
     <br>
-    <div style="box-shadow: 0px 0 30px rgba(0, 0, 0, 0.8);" class="sm:hidden fixed px-5 py-2 bg-white shadow bottom-0 right-0 left-0">
+    <div style="box-shadow: 0px 0 30px rgba(0, 0, 0, 0.8);" class="z-50 sm:hidden fixed px-5 py-2 bg-white shadow bottom-0 right-0 left-0">
         <div class="flex justify-between">
             <a href="{{route('index')}}" class="flex flex-col justify-center">
                 <x-Icons.home class="h-5 w-5 self-center"/>

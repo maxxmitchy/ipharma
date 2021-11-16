@@ -2,10 +2,14 @@
 
 namespace App\Providers;
 
-use App\Spotlight\MyOrders;
 use Livewire\Component;
+use App\Spotlight\MyOrders;
 use Illuminate\Support\Arr;
-use LivewireUI\Spotlight\Spotlight;
+use MailchimpMarketing\ApiClient;
+use App\Services\MailChimpNewsletter;
+use App\Services\NewsletterInterface;
+use App\Services\PaymentGateWayInterface;
+use App\Services\PaystackPayment;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -18,7 +22,20 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        app()->bind(NewsletterInterface::class, function()
+        {
+            $client = (new ApiClient)->setConfig([
+                'apiKey' => config('services.mailchimp.key'),
+                'server' => 'us20',
+            ]);
+
+            return new MailChimpNewsletter($client);
+        });
+
+        app()->bind(PaymentGateWayInterface::class, function()
+        {
+            return new PaystackPayment;
+        });
     }
 
     /**

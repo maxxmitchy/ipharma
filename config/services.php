@@ -35,6 +35,11 @@ return [
         'lists' => [
             'subscribers' => 'b0620f12e5'
         ]
-    ]
+    ],
+
+    'paystack' => [
+        'key' => env('PAYSTACK_SECRET_KEY'),
+        'paymentUrl' => env('PAYSTACK_PAYMENT_URL'),
+    ],
 
 ];

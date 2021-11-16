@@ -3,13 +3,14 @@
 namespace App\Models;
 
 use Laravel\Sanctum\HasApiTokens;
+use App\Jobs\SendVerificationEmail;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
@@ -28,6 +29,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function sendEmailVerificationNotification()
+    {
+        //dispactches the job to the queue passing it this User object
+        SendVerificationEmail::dispatch($this);
+    }
 
     public static function defaultAddress()
     {

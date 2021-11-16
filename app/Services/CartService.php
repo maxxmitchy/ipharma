@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\Discount;
 use App\Models\OrdersItem;
+use App\Models\PaymentGateway;
 use Illuminate\Support\Collection;
 use Illuminate\Session\SessionManager;
 
@@ -138,6 +139,12 @@ class CartService {
 
         $this->getContent()->each(function($product) use($order){
 
+            $currentProduct = Product::find($product['id'])->load('productattribute');
+
+            $currentProduct->productattribute->update([
+                'quantity' => $currentProduct->productattribute->quantity--
+            ]);
+
             OrdersItem::create([
 
                 'product_id' => $product['id'],
@@ -224,10 +231,18 @@ class CartService {
         ]);
     }
 
-    public function createOrder($userId)
+    public function createOrder($order)
     {
         Order::create([
-
+            'user_id' => auth()->id(),
+            'payment_gateway_id' => PaymentGateway::where('name', $order->payment)->first()->id,
+            'name' => $order->address->name,
+            'address' => 'Room ## - ' . $order->address->house . ', ' .  $order->address->street . ' Street, ' . $order->address->city . ' - ' . $order->address->state,
+            'state' => $order->address->state,
+            'city' => $order->address->city,
+            'phone' => $order->address->phone,
+            'email' => auth()->user()->email,
+            'grand_total' => $order->subtotal,
         ]);
     }
 }

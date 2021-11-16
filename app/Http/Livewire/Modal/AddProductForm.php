@@ -104,6 +104,15 @@ class AddProductForm extends ModalComponent
 
     public function store()
     {
+        if(!$this->attribute || !$this->ingredient){
+            // This will give you full access to the error bag.
+            $errors = $this->getErrorBag();
+            // With this error bag instance, you can do things like this:
+            $errors->add('attribute-ingredients', 'Please add the product attributes and ingredients');
+
+            return;
+        }
+
         if(empty($this->allfiles)){
 
             $files = collect();

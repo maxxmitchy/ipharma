@@ -21,7 +21,6 @@
             @case('OrderPage')
                 <x-Display.Auth.User.orderpage :page="$page" :processing="$processing" :unpaid="$unpaid" :delivered="$delivered" :cancelled="$cancelled" :timeleft="$timeleft" />
                 <br>
-                <x-Display.Guest.LandingPage.products-you-may-like/>
             @break
             @case('AddressPage')
                 <x-Display.Auth.User.addressPage/>

@@ -16,7 +16,9 @@
         <!-- end of header -->
         <x-Display.Guest.LandingPage.hero-carousel :banners="$banners" />
         @if (request()->routeIs('category.allcategory'))
-            <div class="bg-blue-500 py-24 mt-3 w-full"></div>
+            <div class="w-full">
+                <livewire:categories-view />
+            </div>
         @else
         <!-- sub nav -->
         <x-Navigation.Guest.Header.sub_filter_header/>
